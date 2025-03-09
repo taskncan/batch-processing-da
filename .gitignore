@@ -169,3 +169,16 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Ignore large datasets (adjust paths as needed)
+data/raw/*
+data/processed/*
+data/output/*
+
+# Ignore Docker-related files
+docker-compose*.yml
+Dockerfile*
+
+# Ignore secret configuration files
+*.key
+*.pem
