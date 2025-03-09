@@ -19,26 +19,26 @@ The pipeline is built as a set of isolated microservices running in Docker conta
    Provides a Flask-based REST API to securely serve processed data to downstream ML applications, using SSL/TLS and authentication.
 
 ## Project Structure
-├── data/                        
-│   ├── raw/                     # Raw dataset files
-│   ├── processed/               # Output from processing service
-│   └── output/                  # Aggregated and final results
-├── docker/                      
-│   ├── ingestion/               # Ingestion service Dockerfile
-│   ├── processing/              # Processing service Dockerfile
-│   └── delivery/                # Delivery service Dockerfile
-├── src/                         
-│   ├── common/                  # Shared utilities
-│   ├── ingestion/               # Ingestion service source code
-│   ├── processing/              # Processing service source code
-│   └── delivery/                # Delivery (API) service source code
-├── config/                      
-│   ├── kafka_config.yml         # Kafka configuration
-│   └── spark_config.yml         # Spark configuration
-├── docker-compose.yml           # Orchestrates all services
-├── .env                         # Environment variables (secrets, config)
-├── requirements.txt             # Unified Python dependencies
-└── README.md                    # This file
+	├── data/                        
+	│   ├── raw/                     # Raw dataset files
+	│   ├── processed/               # Output from processing service
+	│   └── output/                  # Aggregated and final results
+	├── docker/                      
+	│   ├── ingestion/               # Ingestion service Dockerfile
+	│   ├── processing/              # Processing service Dockerfile
+	│   └── delivery/                # Delivery service Dockerfile
+	├── src/                         
+	│   ├── common/                  # Shared utilities
+	│   ├── ingestion/               # Ingestion service source code
+	│   ├── processing/              # Processing service source code
+	│   └── delivery/                # Delivery (API) service source code
+	├── config/                      
+	│   ├── kafka_config.yml         # Kafka configuration
+	│   └── spark_config.yml         # Spark configuration
+	├── docker-compose.yml           # Orchestrates all services
+	├── .env                         # Environment variables (secrets, config)
+	├── requirements.txt             # Unified Python dependencies
+	└── README.md                    # This file
 
 ## Getting Started
 
@@ -55,11 +55,11 @@ The pipeline is built as a set of isolated microservices running in Docker conta
     docker-compose up --build
     ```
 5.	Access the Services:
-	•	API Service: http://localhost:5000/data
-	•	Airflow UI: http://localhost:8080 (if enabled)
+   • API Service: http://localhost:5000/data
+   • Airflow UI: http://localhost:8080 (if enabled)
 
 Security & Best Practices
-	•	Secrets Management: Sensitive settings are stored in the .env file.
-	•	Service Isolation: Each microservice runs in its own Docker container.
-	•	Orchestration: Airflow automates batch processing, ensuring efficient scheduling and reproducibility.
-	•	Version Control: All code and infrastructure definitions are maintained via Git.
+	• Secrets Management: Sensitive settings are stored in the .env file.
+	• Service Isolation: Each microservice runs in its own Docker container.
+	• Orchestration: Airflow automates batch processing, ensuring efficient scheduling and reproducibility.
+	• Version Control: All code and infrastructure definitions are maintained via Git.
