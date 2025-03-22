@@ -20,25 +20,19 @@ The pipeline is built as a set of isolated microservices running in Docker conta
 
 ## Project Structure
 	├── airflow/                        
-	│   ├── dags					 # DAG File (data_pipeline_dag.py)
+	│   ├── dags			 # DAG File (data_pipeline_dag.py)
 	├── data/                        
 	│   ├── raw/                     # Raw dataset files
-	├── docker/                      
-	│   ├── ingestion/               # Ingestion service Dockerfile
-	│   ├── processing/              # Processing service Dockerfile
-	│   └── delivery/                # Delivery service Dockerfile
+ 	│   └── processed/      	 # Processed data file 
 	├── src/                         
 	│   ├── common/                  # Shared utilities
-	│   ├── ingestion/               # Ingestion service source code
-	│   ├── processing/              # Processing service source code
-	│   └── delivery/                # Delivery (API) service source code
-	├── config/                      
-	│   ├── kafka_config.yml         # Kafka configuration
-	│   └── spark_config.yml         # Spark configuration
+	│   ├── ingestion/               # Ingestion service source code and Docker File
+	│   ├── processing/              # Processing service source code and Docker File
+	│   └── delivery/                # Delivery (API) service source code and Docker File
 	├── docker-compose.yml           # Orchestrates all services
 	├── .env                         # Environment variables (secrets, config)
-	├── requirements.txt             # Unified Python dependencies
-	└── README.md                    # R
+	├── requirements.txt             # Python dependencies
+	└── README.md                    # READ ME
 
 ## Getting Started
 
