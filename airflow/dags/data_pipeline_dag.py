@@ -5,7 +5,7 @@ from airflow.operators.bash import BashOperator
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
-    'start_date': datetime(2025, 3, 20),
+    'start_date': datetime(2025, 3, 22),
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
 }
@@ -14,7 +14,7 @@ dag = DAG(
     'data_pipeline',
     default_args=default_args,
     description='A DAG for batch processing Yelp data',
-    schedule_interval=None,  # Runs every hour
+    schedule_interval="@daily",  # Runs every dayly
     catchup=False,  # Optional: prevents backfilling
 )
 

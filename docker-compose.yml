@@ -57,6 +57,7 @@ services:
     networks:
       - data_pipeline
     restart: always
+
   ingestion:
     build:
       context: .
@@ -73,7 +74,7 @@ services:
       - ./src/ingestion:/app
       - ./data:/app/data
     command: python ingestion_service.py
-    restart: always
+    restart: on-failure
     networks:
       - data_pipeline
 
@@ -102,7 +103,7 @@ services:
     command: python spark_processing.py
     networks:
       - data_pipeline
-    restart: always
+    restart: on-failure
   delivery:
     build:
       context: .

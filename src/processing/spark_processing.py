@@ -17,6 +17,9 @@ def main():
         .config("spark.jars.packages", "org.postgresql:postgresql:42.7.1") \
         .getOrCreate()
 
+    # Set log level to WARN to reduce verbose logs
+    spark.sparkContext.setLogLevel("WARN")
+
     input_path = "data/raw/yelp_academic_dataset_business.json"
     df = spark.read.json(input_path)
 

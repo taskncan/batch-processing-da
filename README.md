@@ -20,8 +20,7 @@ The pipeline is built as a set of isolated microservices running in Docker conta
 
 ## Project Structure
 	├── airflow/                        
-	│   ├── dags
-	|	|	├── data_pipeline_dag.py                 # Airflow DAG file
+	│   ├── dags					 # DAG File (data_pipeline_dag.py)
 	├── data/                        
 	│   ├── raw/                     # Raw dataset files
 	├── docker/                      
@@ -39,7 +38,7 @@ The pipeline is built as a set of isolated microservices running in Docker conta
 	├── docker-compose.yml           # Orchestrates all services
 	├── .env                         # Environment variables (secrets, config)
 	├── requirements.txt             # Unified Python dependencies
-	└── README.md                    # This file
+	└── README.md                    # R
 
 ## Getting Started
 
@@ -49,7 +48,7 @@ The pipeline is built as a set of isolated microservices running in Docker conta
    cd batch-processing-da
    ```
 2.	Configure Environment Variables:
-  Update the .env file with your secrets and configuration (DB credentials, SSL keys, etc.). Do not commit this file to version control.
+  Create and Update the .env file with your secrets and configuration (DB credentials, SSL keys, etc.). Do not commit this file to version control.
 
 4.	Build and Run Containers:
      ```bash

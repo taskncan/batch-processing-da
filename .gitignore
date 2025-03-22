@@ -46,6 +46,7 @@ venv.bak/
 data/raw/*
 data/processed/*
 data/output/*
+pgdata/*
 
 # Docker secret or key files                          
 *.key
