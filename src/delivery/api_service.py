@@ -47,7 +47,7 @@ def get_data():
 @app.route('/download', methods=['GET'])
 def download_latest():
     try:
-        processed_dir = "data/processed"
+        processed_dir = "data/downloads"
         files = [f for f in os.listdir(processed_dir) if f.startswith("aggregated_by_city") and f.endswith(".csv")]
         if not files:
             logger.error("No CSV file found in %s.", processed_dir)
